@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/raphael-min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/icarousel.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery.roundabout.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/icarousel.css" title="" type="text/stylsheet" />
+  <title>Test</title>
+
+  <style>
+    #icarousel {
+      width: 300px;
+      height: 635px;
+      position: relative;
+      z-index: 10;
+      margin: 20px auto;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-perspective: 5000px;
+      perspective: 5000px; 
+    }
+      
+    .slide { height: 200px; width: 300px; }
+    .slide1 { background-color: red; }
+    .slide2 { background-color: green; }
+    .slide3 { background-color: purple; }
+  </style>
+</head>
+<body>
+  <div id="icarousel">
+    <div class="slide slide1">
+    </div>
+    <div class="slide slide2">
+    </div>
+    <div class="slide slide3">
+    </div>
+  </div>
+  
+		<script>
+			jQuery(function($) {
+				// Number of slides
+				var postCount = 3;
+				// Initialize the carousel
+				$('#icarousel').iCarousel({
+					slides: postCount,
+					slidesSpace: 300,
+					timer: "360Bar",
+					timerPadding: 3,
+					timerOpacity: 0.5,
+					timerColor: "#0F0",
+					timerX: 15,
+					timerY: 30
+				});
+
+			});
+		</script>
+
+</body>
+</html>
+
