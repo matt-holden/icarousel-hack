@@ -326,6 +326,7 @@
 			
 			//touch
 			touch: function(){
+        return true;
 				return !!('ontouchstart' in window);
 			}
 		},
@@ -1164,16 +1165,16 @@
 	};
 
 
-  $.each({
-    swipeleft: "swipe",
-    swiperight: "swipe"
-  }, function (event, sourceEvent) {
+  //$.each({
+    //swipeleft: "swipe",
+    //swiperight: "swipe"
+  //}, function (event, sourceEvent) {
 
-    $.event.special[event] = {
-      setup: function () {
-        $(this).bind(sourceEvent, $.noop);
-      }
-    };
-  });
+    //$.event.special[event] = {
+      //setup: function () {
+        //$(this).bind(sourceEvent, $.noop);
+      //}
+    //};
+  //});
 
 })(jQuery);
